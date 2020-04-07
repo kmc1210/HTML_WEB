@@ -1,0 +1,87 @@
++ 이클립스 ee 다운 받기
+
+- https: //eclipse.org/
+
+- Download 버튼 클릭
+
+- Download Packages 클릭
+
+- Eclipse IDE for Enterprise Java Devleopers 항목에서 windows 쪽 클릭
+
+- Download 클릭
+
+
++ Apache Tomcat 다운받기  
+
+
+http://tomcat.apache.org/
+
+- 왼쪽 메뉴에서 Tomcat 9 클릭
+
+- 아래쪽에서 Binary Distribution 항목에서
+
+- zip 클릭해서 다운로드
+
+- 압축 푼 폴더 적절한곳(D:) 에 옮겨두기
+
+
++ 이클립스에 Server Runtime (서버실행환경) 등록하기
+
+
+ - 이클립스에서 구동할 수 있도록 서버환경파일을 등록한다
+
+ - 서버를 설치한 것은 아니고 등록만 된 상태
+
+ - window 메뉴의 Preferences 항목을 선택
+
+ - 왼쪽 카테고리창에서 Server - Runtime ENviroments 항목 선택
+  
+ - Tomcat Installation Directory 입력 창에서 오른쪽 Browse...버튼 클릭
+
+ - 압축해제 한 Tomcat 폴더를 선택하고 Finish
+
+ - Apply and Close
+
+
++ 이클립스의 한글 인코딩 환경 설정
+
+ - UTF-8로 설정한다
+
+ - Window 메뉴의 Preferences에서 작업할 것!
+
+
+	1. General 항목
+	  - Workspace 탭
+ 	  - 하단에서 Text file encoding
+ 	  - Other 선택하고
+	  - 목록에서 UTF-8 선택
+	  - Apply 클릭
+
+
+	2. Web 항목
+	  - CSS Files
+	  - HTML Files
+	  - JSP Files
+
+	  - 위 세 곳에서 Encoding 항목을 UTF-8로 설정함
+
+	  - ISO 10646/Unicode(UTF-8)
+    
+  
+  	http://localhost:8088/Test
+
++ 테스트 URL 구조
+	
+	http://localhost:8088/Test/hello/hi.html
+	
+
+	프로토콜 : http ( WEB Service )
+
+	도메인주소(IP): localhost ( 자기 자신 )
+	
+	포트번호: 8088 ( Apache Tomcat 웹 서버 )
+	
+	컨텍스트 Path(경로): /Test
+  
+  파일(자원, resource)의 위치: /hello/hi.html
+    
