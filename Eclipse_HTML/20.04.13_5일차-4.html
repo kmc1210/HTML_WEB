@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<form action="" method="get">
+
+<textarea rows="10" cols="50" name="content"
+	placeholder="긴 글 작성은 여기에 하세요">기본값</textarea>
+<br><br>
+
+
+<!-- textarea 태그는 value속성을 사용할 수 없다(존재하지 않음) -->
+<!-- innerHTML(여는태그와 닫는태그 사이) 에 전송할 데이터가 입력됨 -->
+<!-- innerHTML 영역에 기본값을 설정할 수 있다 -->
+
+<input type="submit" value="전송"/>
+
+<hr>
+
+<select name="month">
+	<option value="0"></option>
+	<option value="one">1 개월</option>
+	<option value="two">2 개월</option>
+	<option value="three">3 개월</option>
+</select>
+
+<!-- name은 select태그에 작성 -->
+<!-- value는 option태그에 작성 -->
+
+
+</form>
+
+</body>
+</html>
