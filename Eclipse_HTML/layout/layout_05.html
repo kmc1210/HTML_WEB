@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+div {width: 200px; height: 100px;} 
+
+#div1 { border: 1px solid red;}
+#div2 { border: 1px solid green;}
+
+#div3 { border: 1px solid blue; }
+
+
+#div1 {	float: left;}
+#div2 { float: right;}
+
+.clearbox{
+	clear: both;
+	
+	
+	height: 0;
+	width: 0;
+	
+}
+
+/*  */
+
+#div3{
+	float: left;
+}
+
+/* p{ */
+
+	/* border: 1px solid black; */
+/* }*/
+#pdiv{
+	/* div태그 선택자에서 설정한 너비, 높이 제거 */
+	width: auto;
+	height: auto;
+	
+	border: 1px solid black;
+}
+
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+</style></head><body>
+
+
+<div id= "div1">DIV1 요소</div>
+
+
+<div id= "div2">DIV2 요소</div>
+
+<div class= "clearbox"></div>
+
+<div id= "pdiv" class="clearfix">
+<div id= "div3">DIV3 요소</div>
+
+<p>그들의 위하여 방황머시기 궁시렁 머시기 동물의 숲 사고 싶은데 재고가 없어서 사지도 못하고
+50만원이 말이 되는 가격이냐 장난하는 것도 아니고 빨리 사서 돈도 갚고 졸귀탱 하마 가브리엘 주민으로 데리고 오고싶다. 
+들의 위하여 방황머시기 궁시렁 머시기들의 위하여 방황머시기 궁시렁 머시기 동물의 숲 사고 싶다아아아아 </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
