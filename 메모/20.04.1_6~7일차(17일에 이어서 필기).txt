@@ -150,10 +150,13 @@
      ::before - 태그 요소의 앞에 가상요소 추가
      ::after - 태그 요소의 두에 가상요소 추가
      
-     ::first-line
-     ::first-letter
+     ::first-line - 요소의 첫번째 줄
+     ::first-letter - 요소의 첫번째 글자
      
-  
-  
   - 부정 선택자
+  
+     :not(S) - 조건 S를 만족하지 않는 요소
+     ( S는 Selector를 이용하여 작성한다)
+     
+     ex)  :not(ul) - ul태그가 아닌 요소
  
