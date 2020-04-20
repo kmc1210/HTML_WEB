@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+#wrap{
+ 	/* <table> 처럼 레이아웃 설정됨 */
+	display: table;
+	/* 내용물(table-cell)의 크기가 일정하도록 설정 */
+	table-layout: fixed;
+	text-align:center;
+	/* 외부 정렬 */
+	margin: 0 auto;
+} 
+
+ #wrap> div{
+	width: 150px;
+	height:150px;
+	/* background-color: #f99; */
+	display:table-cell;
+
+} 
+ 
+#wrap div:nth-child(1){	background: #f00;}
+#wrap div:nth-child(2){	background: #0f0;}
+#wrap div:nth-child(3){	background: #00f;}
+#wrap div:nth-child(4){	background: #ff0;}
+
+ #wrap div{
+ 	height: 150px;
+	/* 테이블의 내용물(table-cell, td, th)처럼 레이아웃 설정됨*/ 
+ 	diplay: table-cell;
+ 	
+ 	/* 수직정렬 */
+ 	 vertical-align: middle; 
+}
+ 
+   #wrap::after{ 
+
+  content: ""; 
+  display:table; 
+  clear:both; 
+
+ } 
+
+</style></head><body>
+
+<!-- border 없이 -->
+<!-- background를 각각 -->
+<div id="wrap"><!--  980px -->
+<div>A</div><div>B</div><div>C</div><div>D</div>
+</div>
+
+<table border="1">
+<hr>
+<tr>
+
+	<td>1</td>
+	<td>2</td>
+	
+</tr>
+<tr>
+	<td>3</td>
+	<td>4</td>
+</tr>		
+</table>
+
+
+</body>
+</html>
