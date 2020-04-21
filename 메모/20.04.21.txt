@@ -1,0 +1,159 @@
+
++ 네비게이션 용어
+
+  - 네비게이션 바(Navigation Bar)의 위치에 따라 부르는 이름
+  
+  - GNB, Global Navigation Bar
+         사이트의 모든 페이지에서 공통으로 사용하는 메뉴바
+         주로 화면의 상단에 위치한다
+         최상위메뉴
+         메인메뉴
+         
+  - LNB, Local Navigation Bar
+         소메뉴
+         GNB의 상세 메뉴
+         서브메뉴
+         페이지들과 직접 링크가 걸려있다.
+        
+  - SNB, Side Navigation Bar
+         사이드 메뉴
+         왼쪽이나 오른쪽 사이드에 두는 메뉴
+  - FNB, Foot Navigation Bar
+         하단 메뉴
+         
+         회사에 대한 소개 페이지링크
+         카피라이트 링크
+         
++ CSS 벤더 프리픽스       
+
+  - CSS3 스타일 속성 앞에 붙이는 브라우저별 접두어
+  
+  - 브라우저마다 접두어가 다르다 
+  
+  - CSS3를 반영한 브라우저 또는 해당 브라우저의 버전에 따라서
+    CSS3 스타일 속성을 테스트하고 그에 따른 피드백을 제공하기 위해 사용된다.
+    
+  - 표준적으로 CSS3가 적용되기 전에 브라우저마다 자체적으로
+    테스트나 개발을 위해 미리 적용된 속성에 접두어를 붙여서 사용할 수 있게
+    제공된 것들
+  
+  + 프리픽스의 종류
+  
+    -webkit-    크롬, 사파리
+    -moz-       파이어폭스
+    -o-         오페라
+    -ms-        인터넷 익스플로러
+    
+    
+ ** 접두어를 적용한 CSS3 속성을 먼저 작성하고
+    접두어를 제거한 표준속성을 마지막에 작성한다
+    
+        -> 이전 버전의 속성보다 나중에 개발된 표준속성이 반영되도록 배치한 것
+  
++ 텍스트 스타일
+  
+   - font-size: 글자 크기
+                px, em을 주로 사용
+            
+            
+   - color: 글자 색상
+            색상 단위로 적용
+            
+            
+   - font-style: 글씨체
+          normal(기본값), italic(이탤릭), oblique(기울임)
+          
+          ** normal 아니면 italic을 많이 사용함
+          
+   - font-weight: 굵기
+          normal(보통), bold(굵게), bolder(더 굵게), lighter(얇게)
+          
+          100(얇음) ~ 900(굵음)
+          (100단위로 설정한다)
+          
+          
+          200~300 lighter
+          400~500 normal
+          600~700 bold
+          800~900 bolder
+          
+          
+    - font-variant : 글자 변형(다양성), 대소문자 글자 스타일
+            normal - 보통 스타일
+            small-cpas-소문자를 작은 대문자로 표현
+            
+    - text-align: 텍스트 정렬
+          left,right, center, justify
+          
+          블록요소에 적용하는 스타일
+          
+          블록요소의 내부 컨텐츠를 정렬한다
+          (텍스트 또는 인라인요소)
+          
+          
+     - text-indent: 들여쓰기       
+          
+     - text-decoration: 꾸밈선
+            none - 없음
+            line-through - 취소선
+            underline - 밑줄
+            overline - 윗줄
+            
+      - line-height: 줄 간격
+            인라인 요소의 높이로 사용된다.
+            
+            1.35em이 기본값
+            
+            font-size에 상대적인 간격을 가지도록 em 으로 설정한다
+            
+            1.6 ~ 1.8em 정도로 설정하면 가독성이 좋아진다.
+            
+            글자가 들어가는 영역의 높이를 나타내며, 
+            글자 기준으로 위아래 공간이 생긴다
+            
+            
+  + font-family, 서체
+  
+     - 글껄( == font )
+     
+     - 서체를 지정하는 스타일 속성
+     
+     - 글꼴에 영향을 준다
+     
+
+  + 서체의 종류
+      
+      serif : 돌출선이 들어간 서체
+       한글 글꼴: 바탕체, 궁서
+       영어 글꼴: Georgia, Times New Roman
+       
+      sans-serif: sans는 '업다'는 뜻, 돌출선(serif)가 없는 서체
+        한글 글꼴: 돋움, 굴림, 고딕, 나눔 고딕, 맑은 고딕
+        영어 글꼴: Arial, Helvetica
+      
+      
+      monospace : 고정 폭 서체, 오타구분이 쉬움, 코딩 폰트
+        대표 서체 : Consolas
+        
+      
+      
+      cursive : 커브가 적용된 서체, 필기체
+      
+      
+      
+      fantasy : 특이한 모양을 가진 서체, 개성있는 서체
+      
+      
+ + 서체를 css로 설정하는 방법      
+ 
+  - font-family는 글꼴을 명시하거나, 서체를 지정할 수 있음
+
+  - font-family의 설정값으로 설정한 서체나 글꼴을 여러 개 지정할 수 있다.
+    (각 항목은, 로 구분)
+    
+  - 설정항목은 순서대로 웹페이지에서 적용된다.    
+
+  - font-family: "돋움", Dotum, "굴림", Gulim, Arial, Helvetica, sans-serif;
+  
+  
+  
