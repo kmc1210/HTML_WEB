@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pizza</title>
+
+
+
+<style type="text/css">
+
+label { line-height: 2.2em;
+		background: gray;
+		border-radius: 3px;
+		padding: 6px;
+}
+
+form{ width: 300px;
+	  background: #ccc;
+}
+
+</style>
+</head>
+<body>
+
+<form action="#" method="get">
+
+
+<table>
+<tr>
+	<td><label for="userid">고객명:</label></td>
+	<td><input type="text" id="userid" name="userid" size="20">
+	</td>
+</tr>
+<tr>
+	<td><label for="uph">전화번호:</label></td>
+	<td><input type="tel" name="userphone" id="uph" size="20">
+	</td>
+</tr>
+
+<tr>
+	<td><label for="mail">E-mail:</label></td>
+	<td><input type="email" name= "e" id= "mail"/></td>
+</tr>
+</table>
+
+
+
+<fieldset>
+<legend>피자 사이즈</legend>
+<label>
+	<input type="radio" name="size" value="S"/>
+	Small		
+</label>
+<br>
+<label>
+	<input type="radio" name="size" value="M"/>
+	Medium		
+</label>
+<br>
+<label>
+	<input type="radio" name="size" value="L"/>
+	Large		
+</label>
+<br>
+</fieldset>
+
+<fieldset>
+<legend> 토핑 선택</legend>
+<label>
+	<input type="checkbox" name="Topping" value="B"/>
+	베이컨		
+</label>
+<br>
+<label>
+	<input type="checkbox" name="Topping" value="C"/>
+	치즈	
+</label>
+<br>
+<label>
+<input type="checkbox" name="Topping" value="O"/>
+양파		
+</label>
+<br>
+<label>
+<input type="checkbox" name="Topping" value="Mush"/>
+버섯		
+</label>
+</fieldset>
+
+
+<label>희망배송시간
+<input type="time" name="hopetime" value="T"/>
+</label>
+
+<br>
+ <label>배송 시 요청 사항</label>
+	<textarea cols="20" rows="3"></textarea>
+<br><br>
+
+<!-- submit 버튼, <form>에서 선택한 내용을 전달함 -->
+<input type="submit" value="주문하기"/>
+
+<!-- 그냥 버튼, <form>에서 선택한 내용을 전달하지 않음 -->
+<!-- <input type="button" value="주문하기"/>
+<button type= "button">주문하기</button> -->
+
+</form>
+</body>
+</html>
