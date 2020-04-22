@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+.imgBox{
+	width: 320px;
+	height: 260px;
+
+	border: 1px solid #ccc;
+	
+	text-align: center; /* 내부 정렬 */
+	
+	padding: 10px;
+	
+	/* 상대 위치 지정 */
+	position: relative;
+	left:100px;
+	
+	/* 요소의 그림자 설정 속성 */
+	-moz-box-shadow: 5px 5px 10px 0px #999;
+	-webkit-box-shadow: 5px 5px 10px 0px #999;
+	box-shadow: 5px 5px 10px 0px #999;
+	
+	/* CrossBrowsing: 모든 브라우저에서 전부 다 사용할 수 있게하는 것 */
+	/* box-shadow: x축이동 y축이동 흐려짐(blur) 펼치기(spread) 색상; */
+	
+	
+	/* 요소의 모양 변형 */
+	-moz-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	transform: rotate(15deg);
+	
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+<header>
+<h1>SEMANTIC TAG LAYOUT</h1>
+<h3>시맨틱 태그</h3>
+</header>
+
+
+<!-- 네비게이션 -->
+<nav>
+<ul>
+
+	<li><a href="#">&lt;header&gt; 태그</a></li>
+	<li><a href="#">&lt;nav&gt; 태그</a></li>
+	<li><a href="#">&lt;section&gt; 태그</a></li>
+	<li><a href="#">&lt;article&gt; 태그</a></li>
+	<li><a href="#">&lt;footer&gt; 태그</a></li>
+	
+</ul>
+</nav>
+
+
+<hr>
+
+<section>
+<article>
+	<p>내용물을 적는 곳! 기본 콘텐츠가 들어간다</p>
+	
+	<div class="imgBox"> 
+		<img alt="가브리엘" src="../file/가브리엘.jpg" width="150" height="200" />
+		<br>
+		section태그 안에 article 태그로 표현하고 있다!
+	</div>
+	
+</article>
+</section>
+
+
+<hr>
+
+<footer style="font-size: 0.8em; text-align: center;">
+powerd by Nyong<br>
+&copy; Nyong
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
