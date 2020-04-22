@@ -2,95 +2,180 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>menu:이중 숨김다중메뉴</title>
+<!-- 스타일 -->
 <style type="text/css">
 
-.imgBox{
-	width: 320px;
-	height: 260px;
-
-	border: 1px solid #ccc;
+/*메인메뉴*/
+.nav{
+	/*기본 리스트 스타일(disc) 없애기*/
+	list-style-type:none;
 	
-	text-align: center; /* 내부 정렬 */
+	/*기본 여백 제거하기*/
+	padding:0;
+	margin:0;
+}
+/*메뉴항목 영역*/
+.nav>li{ /*.nav의 자식 li태그 */
+ 	float:left;
+ 	
+ 	/* 높에 조절하기 */
+ 	/*padding: 20px 0; /*상하 20px, 좌우 0 li간 40px;*/
+ 	line-height: 40px;
+ 	
+ 	/*배경색*/
+	background:pink;
+	/*오른쪽 테두리 설정 -> 메뉴항목 구분하기*/
+	border-right:5px solid	white;
 	
-	padding: 10px;
 	
-	/* 상대 위치 지정 */
-	position: relative;
-	left:100px;
+	/*margin영역을 눌러도 앵커에 걸린다 -> 맞게 조절*/
+	/*내용물이 <li>항목보다 크면 보이지 않도록 잘라내기
+		<li>보다 <a> 영여깅 클때 적용하면 좋다
+	overflow:hidden*/
 	
-	/* 요소의 그림자 설정 속성 */
-	-moz-box-shadow: 5px 5px 10px 0px #999;
-	-webkit-box-shadow: 5px 5px 10px 0px #999;
-	box-shadow: 5px 5px 10px 0px #999;
+	/*absolute 자식영역의 기준점으로 사용한다.*/
+	position:relative;
+}
+/* 메인 메뉴항목의 텍스트(링크) / 부가메뉴는 안건드림*/
+.nav>li>a{
 	
-	/* CrossBrowsing: 모든 브라우저에서 전부 다 사용할 수 있게하는 것 */
-	/* box-shadow: x축이동 y축이동 흐려짐(blur) 펼치기(spread) 색상; */
+	display:block;
+	/*글자 색 */
+	color:#fff;
 	
+	/*글자 꾸밈선 없애기*/
+	text-decoration:none;
 	
-	/* 요소의 모양 변형 */
-	-moz-transform: rotate(15deg);
-	-o-transform: rotate(15deg);
-	-webkit-transform: rotate(15deg);
-	-ms-transform: rotate(15deg);
-	transform: rotate(15deg);
+	/*글자 스타일 지정*/
+	font-size:1.5em;
+	font-family:"돋움",dotum,sans-serif;
+	font-weight:bold;
+	/*내부여백(링크가 클릭되는 영역)*/
+	padding:10px 15px;
+	
+	/*외부여백(링크 클릭 안되는 영역, 다른<a>와 구분되도록 만든다)*/
+	margin:0 3px;
 	
 }
+/* 메인메뉴 <a> 태그 영역에 마우스를 올렸을 때*/
+.nav>li>a:hover{
+	/*색상 변경*/
+	color:tomato;
+	transition:all 2s;
+}
 
+/*서브메뉴*/
+.nav>li > ul{
+	
+	/*HTML 계층구조에서 빼는 설정*/
+	/*부모요소인 <li>태그의 컨텐츠 영역을 차지하지 않도록 만들기*/
+	position:absolute;
+	left:0px;
+	/*기본 스타일 리스트스타일(disc) 제거*/
+	list-style-type:none;
+	/*기본 여백 제거하기*/
+	padding:10px;
+	margin:0;
+	
+	/*서브메뉴의 너비*/
+	width:100px;
+	}
 
+/*서브메뉴 항목*/
+.nav > li > ul > li{
+	/*배경색*/
+	background:pink;
+	
+	
+	/*평소에는 안보이게 설정하기 2가지 방법*/
+	font-size:0; /*폰트를 0으로*/	
+	height:0    ;
+	line-height:0;
+	/*display:none;/*display를 none으로*/
+	
+	/*서브메뉴 텍스트 들여쓰기 효과*/
+	padding-left:10px;
+}
+
+.nav > li:hover > ul>li{
+	/*display:none 에대한 처리*/
+	/*display:list-item;*/
+	/*0으로 설정한 것에 대한 처리*/
+	/*
+	line-height:inherit;
+	height:inherit;
+	font-size:inherit;
+	*/
+	/*inherit으로는 변화가 적용되지 않는다(얼마나 커져야되는지 인식을 못함)*/
+	line-height:40px;
+	height:40px;
+	font-size:20px;
+	
+	/*움직임*/
+	transition: all 2s;
+	
+}
+/* 서브메뉴의 링크 텍스트*/
+.nav>li>ul>li>a{
+	/*배경색*/
+	background:#eee;
+	
+	/*글자 색상*/
+	color:#333;
+	
+	/*데코 없애기*/
+	text-decoration:none;
+	
+	/*앵커가 꽉차게된다*/
+	/*li 항목 영역을 꽉 채우도록 만듬*/
+	display:block;	
+}
+/*각각항목에 배경과 글자 색 바꾸기*/
+.nav>li>ul>li>a:hover{
+	/*글자색 변경*/
+	color:red;
+	/*배경색 변경*/
+	background:#00c;
+}
 </style>
-
-
 
 </head>
 <body>
-<header>
-<h1>SEMANTIC TAG LAYOUT</h1>
-<h3>시맨틱 태그</h3>
-</header>
-
-
-<!-- 네비게이션 -->
-<nav>
-<ul>
-
-	<li><a href="#">&lt;header&gt; 태그</a></li>
-	<li><a href="#">&lt;nav&gt; 태그</a></li>
-	<li><a href="#">&lt;section&gt; 태그</a></li>
-	<li><a href="#">&lt;article&gt; 태그</a></li>
-	<li><a href="#">&lt;footer&gt; 태그</a></li>
+	<h2> 2depth 메뉴만들기: 최푸름</h2>
+	<hr/>
 	
-</ul>
-</nav>
-
-
-<hr>
-
-<section>
-<article>
-	<p>내용물을 적는 곳! 기본 콘텐츠가 들어간다</p>
+	<!-- 상단메뉴 -->
+	<ul class="nav">
 	
-	<div class="imgBox"> 
-		<img alt="가브리엘" src="../file/가브리엘.jpg" width="150" height="200" />
-		<br>
-		section태그 안에 article 태그로 표현하고 있다!
-	</div>
-	
-</article>
-</section>
-
-
-<hr>
-
-<footer style="font-size: 0.8em; text-align: center;">
-powerd by Nyong<br>
-&copy; Nyong
-</footer>
-
-
-
-
-
+		<!-- 홈메뉴 -->
+		<li><a href="#">Home</a></li>
+		
+		<!-- 웹개발팀메뉴 -->
+		<li>
+			<a href="#">웹 개발팀</a>
+			<ul>
+				<li><a href="#">웹디자이너</a></li>
+				<li><a href="#">웹퍼블리셔</a></li>
+				<li><a href="#">웹개발자</a></li>
+				<li><a href="#">웹엔지니어</a></li>
+			</ul>
+		</li>
+		
+		<!-- 게시판메뉴 -->
+		<li>
+			<a href="#">게시판</a>
+			<ul>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">자유게시판</a></li>
+			</ul>
+		</li>
+		
+		<!-- 문의하기 메뉴 -->
+		<li>
+			<a href="#">문의하기</a>
+		</li>
+	</ul>
 
 
 
